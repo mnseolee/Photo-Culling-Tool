@@ -18,9 +18,10 @@ def score(path):
     h, w = img.shape[:2]
     img = cv2.resize(img, (1000, int(h * 1000 / w)))
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    small = cv2.resize(gray, (250, int(gray.shape[0] * 250 / gray.shape[1])), interpolation=cv2.INTER_AREA)
     return {
         "filename": os.path.basename(path),
-        "blur": cv2.Laplacian(gray, cv2.CV_64F).var(),
+        "blur": cv2.Laplacian(small, cv2.CV_64F).var(),
         "brightness": gray.mean(),
         "clipped": ((gray <= 5) | (gray >= 250)).mean(),
         "contrast": gray.std(),
