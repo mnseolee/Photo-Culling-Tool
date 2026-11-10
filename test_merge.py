@@ -1,9 +1,3 @@
-"""Setup step 4: 5-row fake merge test. Writes fake_features.csv and
-fake_labels.csv (so the real features.csv is never overwritten) and merges them.
-
-Usage:
-    python test_merge.py
-"""
 import pandas as pd
 
 names = [f"IMG_{i:04d}.jpg" for i in range(1, 6)]
