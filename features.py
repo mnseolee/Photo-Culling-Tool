@@ -1,8 +1,3 @@
-"""Person A: turn each photo into four scores -> features.csv
-
-Usage (from the repo root):
-    python features.py photos
-"""
 import sys, os
 import cv2
 import numpy as np
