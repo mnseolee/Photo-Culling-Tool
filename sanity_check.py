@@ -1,8 +1,3 @@
-"""Step 7: open the 5 blurriest photos so you can check them by eye.
-
-Usage:
-    python sanity_check.py photos
-"""
 import sys, os
 import pandas as pd
 
